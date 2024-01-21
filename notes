@@ -3,7 +3,7 @@ Day-1
 • Intro about Programming Language Paradigms
 ============================================
 Programming language paradigms represent different approaches or styles of programming, each with its own principles, concepts, and methodologies. 
-Here are some major programming 	paradigms:
+Here are some major programming paradigms:
 1. Imperative Programming:
 Description: Directly instructs the computer on how to perform tasks.
 Characteristics: Focuses on statements that change a program's state through assignment, loops, and control structures.
@@ -2956,8 +2956,9 @@ Annotations are a powerful tool in Java that aids in documentation, code analysi
 Day-5
 -----
 • Understanding Threads
-===================
-Threads in Java represent the smallest unit of execution within a process. They allow concurrent execution, enabling multiple tasks to run in parallel, and are essential for achieving concurrency and multitasking in Java programs.
+=======================
+Threads in Java represent the smallest unit of execution within a process.
+They allow concurrent execution, enabling multiple tasks to run in parallel, and are essential for achieving concurrency and multitasking in Java programs.
 Key Concepts about Threads:
 
     Thread Creation: Threads can be created by extending the Thread class or implementing the Runnable interface.

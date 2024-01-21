@@ -2959,11 +2959,10 @@ Day-5
 =======================
 Threads in Java represent the smallest unit of execution within a process.
 They allow concurrent execution, enabling multiple tasks to run in parallel, and are essential for achieving concurrency and multitasking in Java programs.
-Key Concepts about Threads:
 
+Key Concepts about Threads:
     Thread Creation: Threads can be created by extending the Thread class or implementing the Runnable interface.
         Extending Thread Class:
-
 
 class MyThread extends Thread {
     public void run() {

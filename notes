@@ -2410,7 +2410,7 @@ Understanding how the JVM reacts to exceptions is essential for handling errors 
 
 
 Exception handling in java
-====================
+===========================
 
 Each aspect of Java exception handling serves specific purposes in managing exceptions. Here's a breakdown of various techniques:
 1. Try-Catch Block:

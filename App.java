@@ -1,42 +1,29 @@
-package springinventory.beans;
+package springpayroll.controller;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+import springpayroll.modal.Employee;
+import springpayroll.modal.User;
+
+
+@ComponentScan( basePackages = {"springpayroll.modal.Employee,springpayroll.modal.User"} )
 public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
 		
-		//ioc container
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("Spring-Module.xml");
-
-		Product p1=(Product)context.getBean("proBean");
-		
-		/*
-		 * p.setId(11); p.setName("Gemini"); p.setPrice(1000.00f);
-		 */
-		
-		Product p2=(Product)context.getBean("proBean");
+		//register bean configuration java class file
+		context.register(AppConfig.class);
+		//referesh the context means application
+		context.refresh();
+		//create Employee bean
+		Employee emp=(Employee) context.getBean("emp",Employee.class);
+		//create User bean
+		User user=(User) context.getBean(User.class);
 		
 		
-		 // p2.setId(444); p2.setName("Assam chai"); p2.setPrice(500.00f);
-		 
-		Customer c1=(Customer) context.getBean("cust");
-
-		Customer c2=(Customer) context.getBean("cust");
-		System.out.println(p1);
-		System.out.println(p2);
-		System.out.println(c1);
-		System.out.println(c2);
-
-		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
-		obj.printHello();
-
-		
-		Order o1=(Order) context.getBean("order1");
-		
-		System.out.println(o1);
-
 	}
 
 }

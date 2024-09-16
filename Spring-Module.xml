@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="helloBean" class="springinventory.beans.HelloWorld">
+		<property name="name" value="Sivaram" />
+	</bean>
+
+	<bean id="proBean" class="springinventory.beans.Product" scope="prototype">
+
+		<property name="id" value="11" />
+		<property name="name" value="Topstar" />
+		<property name="price" value="1000.00f" />
+
+	</bean>
+	<bean id="p1" class="springinventory.beans.Product" scope="prototype">
+
+		<property name="id" value="1" />
+		<property name="name" value="Topstar" />
+		<property name="price" value="1000.00f" />
+
+	</bean>
+	<bean id="p2" class="springinventory.beans.Product" scope="prototype">
+
+		<property name="id" value="22" />
+		<property name="name" value="Lipton dust tea" />
+		<property name="price" value="260.00f" />
+
+	</bean>
+	<bean id="address" class="springinventory.beans.Address" scope="prototype">
+		<constructor-arg value="17"></constructor-arg>
+		<constructor-arg value="Near Barat petrolium"></constructor-arg>
+		<constructor-arg value="Hyderabad"></constructor-arg>
+		<constructor-arg value="India"></constructor-arg>
+	</bean>
+	<bean id="cust" class="springinventory.beans.Customer" scope="prototype">
+
+		<constructor-arg value="111"></constructor-arg>
+		<constructor-arg value="Suresh"></constructor-arg>
+		<constructor-arg>
+			<ref bean="address" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="order1" class="springinventory.beans.Order" scope="prototype">
+
+		<constructor-arg value="1"></constructor-arg>
+
+		<constructor-arg>
+			<ref bean="cust" />
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="p1"/>  
+				<ref bean="p2"/>  
+
+			</list>
+
+		</constructor-arg>
+
+	</bean>
+
+</beans>
+
